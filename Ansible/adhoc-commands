@@ -1,0 +1,3 @@
+install webserver on the target machines
+
+ansible webserver -m yum -a "name=httpd state=present" -b
