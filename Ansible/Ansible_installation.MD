@@ -63,3 +63,7 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    ```sh 
    ansible all -m ping
    ```
+We need these settings in ansible.cfg file for ping to work properly
+[defaults]
+interpreter_python = auto_silent
+host_key_checking = false
