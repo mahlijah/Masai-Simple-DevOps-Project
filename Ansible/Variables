@@ -1,0 +1,13 @@
+#next line is an example of how to filter the results of ansible fact checks
+#ansible all -m setup -a "filter=*ipv4*"
+---
+- hosts: all
+  vars:
+    - username: ansible
+    - home: /home/ansible
+  tasks:
+    - name: print variables
+      debug:
+        msg: 
+          - "Username: {{ username }}, Home dir: {{ home }}"
+          - " IPV4 Address {{ ansible_default_ipv4.address}} "
